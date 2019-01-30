@@ -1,0 +1,6 @@
+framework module Pods_SBM_AYURTests {
+  umbrella header "Pods-SBM AYURTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

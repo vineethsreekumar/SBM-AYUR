@@ -1,0 +1,751 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67F899724F5FD1708845D7FA /* Pods_SBM_AYURUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9B1EBA4FA9D7233F1E6F97 /* Pods_SBM_AYURUITests.framework */; };
+		721351DB3FE05B0E90FF79DE /* Pods_SBM_AYUR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F125621CCE83F7FE94279D /* Pods_SBM_AYUR.framework */; };
+		85542C8422019C6A0019A6F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85542C8322019C6A0019A6F2 /* AppDelegate.m */; };
+		85542C8722019C6A0019A6F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85542C8622019C6A0019A6F2 /* ViewController.m */; };
+		85542C8A22019C6A0019A6F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85542C8822019C6A0019A6F2 /* Main.storyboard */; };
+		85542C8C22019C780019A6F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85542C8B22019C780019A6F2 /* Assets.xcassets */; };
+		85542C8F22019C780019A6F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85542C8D22019C780019A6F2 /* LaunchScreen.storyboard */; };
+		85542C9222019C780019A6F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85542C9122019C780019A6F2 /* main.m */; };
+		85542C9C22019C780019A6F2 /* SBM_AYURTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85542C9B22019C780019A6F2 /* SBM_AYURTests.m */; };
+		85542CA722019C790019A6F2 /* SBM_AYURUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85542CA622019C790019A6F2 /* SBM_AYURUITests.m */; };
+		85542CC022019D2D0019A6F2 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85542CB522019D2B0019A6F2 /* AboutViewController.m */; };
+		85542CC122019D2D0019A6F2 /* MemoriesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85542CB722019D2B0019A6F2 /* MemoriesDetailViewController.m */; };
+		85542CC222019D2D0019A6F2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 85542CB822019D2B0019A6F2 /* Reachability.m */; };
+		85542CC322019D2D0019A6F2 /* MemoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85542CBA22019D2C0019A6F2 /* MemoriesViewController.m */; };
+		85542CC422019D2D0019A6F2 /* splashscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85542CBB22019D2C0019A6F2 /* splashscreen@2x.png */; };
+		85542CC522019D2D0019A6F2 /* back-arrow-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85542CBC22019D2C0019A6F2 /* back-arrow-icon@3x.png */; };
+		85542CC622019D2D0019A6F2 /* back-arrow-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85542CBD22019D2C0019A6F2 /* back-arrow-icon@2x.png */; };
+		85542CC722019D2D0019A6F2 /* download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85542CBE22019D2C0019A6F2 /* download@2x.png */; };
+		85542CC922022E760019A6F2 /* call@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85542CC822022E760019A6F2 /* call@2x.png */; };
+		DA474D5EB4DBF168C6153624 /* Pods_SBM_AYURTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92914C703E51391604ACF6A /* Pods_SBM_AYURTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		85542C9822019C780019A6F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85542C7722019C690019A6F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85542C7E22019C6A0019A6F2;
+			remoteInfo = "SBM AYUR";
+		};
+		85542CA322019C790019A6F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85542C7722019C690019A6F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85542C7E22019C6A0019A6F2;
+			remoteInfo = "SBM AYUR";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27F81C957C5E4780DCBD114D /* Pods-SBM AYUR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBM AYUR.release.xcconfig"; path = "Pods/Target Support Files/Pods-SBM AYUR/Pods-SBM AYUR.release.xcconfig"; sourceTree = "<group>"; };
+		2AEF09778D5CCFC266D366D9 /* Pods-SBM AYURTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBM AYURTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SBM AYURTests/Pods-SBM AYURTests.release.xcconfig"; sourceTree = "<group>"; };
+		452451D8F790F2193498BADD /* Pods-SBM AYURTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBM AYURTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SBM AYURTests/Pods-SBM AYURTests.debug.xcconfig"; sourceTree = "<group>"; };
+		774034551376159A2672D32B /* Pods-SBM AYURUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBM AYURUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SBM AYURUITests/Pods-SBM AYURUITests.release.xcconfig"; sourceTree = "<group>"; };
+		818C514BEC6710C4D5148B2E /* Pods-SBM AYURUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBM AYURUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SBM AYURUITests/Pods-SBM AYURUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		85542C7F22019C6A0019A6F2 /* SBM AYUR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SBM AYUR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85542C8222019C6A0019A6F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		85542C8322019C6A0019A6F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		85542C8522019C6A0019A6F2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		85542C8622019C6A0019A6F2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		85542C8922019C6A0019A6F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		85542C8B22019C780019A6F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85542C8E22019C780019A6F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		85542C9022019C780019A6F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85542C9122019C780019A6F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		85542C9722019C780019A6F2 /* SBM AYURTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SBM AYURTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85542C9B22019C780019A6F2 /* SBM_AYURTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBM_AYURTests.m; sourceTree = "<group>"; };
+		85542C9D22019C780019A6F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85542CA222019C790019A6F2 /* SBM AYURUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SBM AYURUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85542CA622019C790019A6F2 /* SBM_AYURUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBM_AYURUITests.m; sourceTree = "<group>"; };
+		85542CA822019C790019A6F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85542CB422019D2B0019A6F2 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		85542CB522019D2B0019A6F2 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		85542CB622019D2B0019A6F2 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		85542CB722019D2B0019A6F2 /* MemoriesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoriesDetailViewController.m; sourceTree = "<group>"; };
+		85542CB822019D2B0019A6F2 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		85542CB922019D2C0019A6F2 /* MemoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoriesViewController.h; sourceTree = "<group>"; };
+		85542CBA22019D2C0019A6F2 /* MemoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoriesViewController.m; sourceTree = "<group>"; };
+		85542CBB22019D2C0019A6F2 /* splashscreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splashscreen@2x.png"; sourceTree = "<group>"; };
+		85542CBC22019D2C0019A6F2 /* back-arrow-icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-arrow-icon@3x.png"; sourceTree = "<group>"; };
+		85542CBD22019D2C0019A6F2 /* back-arrow-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-arrow-icon@2x.png"; sourceTree = "<group>"; };
+		85542CBE22019D2C0019A6F2 /* download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download@2x.png"; sourceTree = "<group>"; };
+		85542CBF22019D2D0019A6F2 /* MemoriesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoriesDetailViewController.h; sourceTree = "<group>"; };
+		85542CC822022E760019A6F2 /* call@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call@2x.png"; sourceTree = "<group>"; };
+		90F125621CCE83F7FE94279D /* Pods_SBM_AYUR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SBM_AYUR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99675ACBD3E245AC9DF34DAB /* Pods-SBM AYUR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBM AYUR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SBM AYUR/Pods-SBM AYUR.debug.xcconfig"; sourceTree = "<group>"; };
+		AD9B1EBA4FA9D7233F1E6F97 /* Pods_SBM_AYURUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SBM_AYURUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C92914C703E51391604ACF6A /* Pods_SBM_AYURTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SBM_AYURTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85542C7C22019C6A0019A6F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				721351DB3FE05B0E90FF79DE /* Pods_SBM_AYUR.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85542C9422019C780019A6F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA474D5EB4DBF168C6153624 /* Pods_SBM_AYURTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85542C9F22019C790019A6F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67F899724F5FD1708845D7FA /* Pods_SBM_AYURUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1720FA9C8FCE9ADFD0C1EC12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90F125621CCE83F7FE94279D /* Pods_SBM_AYUR.framework */,
+				C92914C703E51391604ACF6A /* Pods_SBM_AYURTests.framework */,
+				AD9B1EBA4FA9D7233F1E6F97 /* Pods_SBM_AYURUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85542C7622019C690019A6F2 = {
+			isa = PBXGroup;
+			children = (
+				85542C8122019C6A0019A6F2 /* SBM AYUR */,
+				85542C9A22019C780019A6F2 /* SBM AYURTests */,
+				85542CA522019C790019A6F2 /* SBM AYURUITests */,
+				85542C8022019C6A0019A6F2 /* Products */,
+				D2E38F48DC8313090E80049B /* Pods */,
+				1720FA9C8FCE9ADFD0C1EC12 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		85542C8022019C6A0019A6F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85542C7F22019C6A0019A6F2 /* SBM AYUR.app */,
+				85542C9722019C780019A6F2 /* SBM AYURTests.xctest */,
+				85542CA222019C790019A6F2 /* SBM AYURUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85542C8122019C6A0019A6F2 /* SBM AYUR */ = {
+			isa = PBXGroup;
+			children = (
+				85542C8222019C6A0019A6F2 /* AppDelegate.h */,
+				85542C8322019C6A0019A6F2 /* AppDelegate.m */,
+				85542C8522019C6A0019A6F2 /* ViewController.h */,
+				85542C8622019C6A0019A6F2 /* ViewController.m */,
+				85542CB422019D2B0019A6F2 /* AboutViewController.h */,
+				85542CB522019D2B0019A6F2 /* AboutViewController.m */,
+				85542CBD22019D2C0019A6F2 /* back-arrow-icon@2x.png */,
+				85542CBC22019D2C0019A6F2 /* back-arrow-icon@3x.png */,
+				85542CBE22019D2C0019A6F2 /* download@2x.png */,
+				85542CBF22019D2D0019A6F2 /* MemoriesDetailViewController.h */,
+				85542CB722019D2B0019A6F2 /* MemoriesDetailViewController.m */,
+				85542CB922019D2C0019A6F2 /* MemoriesViewController.h */,
+				85542CBA22019D2C0019A6F2 /* MemoriesViewController.m */,
+				85542CB622019D2B0019A6F2 /* Reachability.h */,
+				85542CB822019D2B0019A6F2 /* Reachability.m */,
+				85542CBB22019D2C0019A6F2 /* splashscreen@2x.png */,
+				85542CC822022E760019A6F2 /* call@2x.png */,
+				85542C8822019C6A0019A6F2 /* Main.storyboard */,
+				85542C8B22019C780019A6F2 /* Assets.xcassets */,
+				85542C8D22019C780019A6F2 /* LaunchScreen.storyboard */,
+				85542C9022019C780019A6F2 /* Info.plist */,
+				85542C9122019C780019A6F2 /* main.m */,
+			);
+			path = "SBM AYUR";
+			sourceTree = "<group>";
+		};
+		85542C9A22019C780019A6F2 /* SBM AYURTests */ = {
+			isa = PBXGroup;
+			children = (
+				85542C9B22019C780019A6F2 /* SBM_AYURTests.m */,
+				85542C9D22019C780019A6F2 /* Info.plist */,
+			);
+			path = "SBM AYURTests";
+			sourceTree = "<group>";
+		};
+		85542CA522019C790019A6F2 /* SBM AYURUITests */ = {
+			isa = PBXGroup;
+			children = (
+				85542CA622019C790019A6F2 /* SBM_AYURUITests.m */,
+				85542CA822019C790019A6F2 /* Info.plist */,
+			);
+			path = "SBM AYURUITests";
+			sourceTree = "<group>";
+		};
+		D2E38F48DC8313090E80049B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99675ACBD3E245AC9DF34DAB /* Pods-SBM AYUR.debug.xcconfig */,
+				27F81C957C5E4780DCBD114D /* Pods-SBM AYUR.release.xcconfig */,
+				452451D8F790F2193498BADD /* Pods-SBM AYURTests.debug.xcconfig */,
+				2AEF09778D5CCFC266D366D9 /* Pods-SBM AYURTests.release.xcconfig */,
+				818C514BEC6710C4D5148B2E /* Pods-SBM AYURUITests.debug.xcconfig */,
+				774034551376159A2672D32B /* Pods-SBM AYURUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85542C7E22019C6A0019A6F2 /* SBM AYUR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85542CAB22019C790019A6F2 /* Build configuration list for PBXNativeTarget "SBM AYUR" */;
+			buildPhases = (
+				7338626A41AFD9548D4A2831 /* [CP] Check Pods Manifest.lock */,
+				85542C7B22019C6A0019A6F2 /* Sources */,
+				85542C7C22019C6A0019A6F2 /* Frameworks */,
+				85542C7D22019C6A0019A6F2 /* Resources */,
+				9A9317C238E92A9A0671081B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SBM AYUR";
+			productName = "SBM AYUR";
+			productReference = 85542C7F22019C6A0019A6F2 /* SBM AYUR.app */;
+			productType = "com.apple.product-type.application";
+		};
+		85542C9622019C780019A6F2 /* SBM AYURTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85542CAE22019C790019A6F2 /* Build configuration list for PBXNativeTarget "SBM AYURTests" */;
+			buildPhases = (
+				8C50675F5C8018E98BB4413C /* [CP] Check Pods Manifest.lock */,
+				85542C9322019C780019A6F2 /* Sources */,
+				85542C9422019C780019A6F2 /* Frameworks */,
+				85542C9522019C780019A6F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85542C9922019C780019A6F2 /* PBXTargetDependency */,
+			);
+			name = "SBM AYURTests";
+			productName = "SBM AYURTests";
+			productReference = 85542C9722019C780019A6F2 /* SBM AYURTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		85542CA122019C790019A6F2 /* SBM AYURUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85542CB122019C790019A6F2 /* Build configuration list for PBXNativeTarget "SBM AYURUITests" */;
+			buildPhases = (
+				448F6DEAB0E2E4B207F22CBC /* [CP] Check Pods Manifest.lock */,
+				85542C9E22019C790019A6F2 /* Sources */,
+				85542C9F22019C790019A6F2 /* Frameworks */,
+				85542CA022019C790019A6F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85542CA422019C790019A6F2 /* PBXTargetDependency */,
+			);
+			name = "SBM AYURUITests";
+			productName = "SBM AYURUITests";
+			productReference = 85542CA222019C790019A6F2 /* SBM AYURUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85542C7722019C690019A6F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = MyOrganization;
+				TargetAttributes = {
+					85542C7E22019C6A0019A6F2 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					85542C9622019C780019A6F2 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 85542C7E22019C6A0019A6F2;
+					};
+					85542CA122019C790019A6F2 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 85542C7E22019C6A0019A6F2;
+					};
+				};
+			};
+			buildConfigurationList = 85542C7A22019C690019A6F2 /* Build configuration list for PBXProject "SBM AYUR" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85542C7622019C690019A6F2;
+			productRefGroup = 85542C8022019C6A0019A6F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85542C7E22019C6A0019A6F2 /* SBM AYUR */,
+				85542C9622019C780019A6F2 /* SBM AYURTests */,
+				85542CA122019C790019A6F2 /* SBM AYURUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85542C7D22019C6A0019A6F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85542C8F22019C780019A6F2 /* LaunchScreen.storyboard in Resources */,
+				85542CC522019D2D0019A6F2 /* back-arrow-icon@3x.png in Resources */,
+				85542C8C22019C780019A6F2 /* Assets.xcassets in Resources */,
+				85542C8A22019C6A0019A6F2 /* Main.storyboard in Resources */,
+				85542CC922022E760019A6F2 /* call@2x.png in Resources */,
+				85542CC722019D2D0019A6F2 /* download@2x.png in Resources */,
+				85542CC622019D2D0019A6F2 /* back-arrow-icon@2x.png in Resources */,
+				85542CC422019D2D0019A6F2 /* splashscreen@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85542C9522019C780019A6F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85542CA022019C790019A6F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		448F6DEAB0E2E4B207F22CBC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SBM AYURUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7338626A41AFD9548D4A2831 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SBM AYUR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C50675F5C8018E98BB4413C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SBM AYURTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A9317C238E92A9A0671081B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SBM AYUR/Pods-SBM AYUR-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SBM AYUR/Pods-SBM AYUR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85542C7B22019C6A0019A6F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85542C8722019C6A0019A6F2 /* ViewController.m in Sources */,
+				85542C9222019C780019A6F2 /* main.m in Sources */,
+				85542CC122019D2D0019A6F2 /* MemoriesDetailViewController.m in Sources */,
+				85542CC322019D2D0019A6F2 /* MemoriesViewController.m in Sources */,
+				85542CC022019D2D0019A6F2 /* AboutViewController.m in Sources */,
+				85542CC222019D2D0019A6F2 /* Reachability.m in Sources */,
+				85542C8422019C6A0019A6F2 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85542C9322019C780019A6F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85542C9C22019C780019A6F2 /* SBM_AYURTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85542C9E22019C790019A6F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85542CA722019C790019A6F2 /* SBM_AYURUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		85542C9922019C780019A6F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85542C7E22019C6A0019A6F2 /* SBM AYUR */;
+			targetProxy = 85542C9822019C780019A6F2 /* PBXContainerItemProxy */;
+		};
+		85542CA422019C790019A6F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85542C7E22019C6A0019A6F2 /* SBM AYUR */;
+			targetProxy = 85542CA322019C790019A6F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		85542C8822019C6A0019A6F2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85542C8922019C6A0019A6F2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		85542C8D22019C780019A6F2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85542C8E22019C780019A6F2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		85542CA922019C790019A6F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		85542CAA22019C790019A6F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85542CAC22019C790019A6F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99675ACBD3E245AC9DF34DAB /* Pods-SBM AYUR.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5G346A28TT;
+				INFOPLIST_FILE = "SBM AYUR/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.org.SBM-AYUR";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		85542CAD22019C790019A6F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27F81C957C5E4780DCBD114D /* Pods-SBM AYUR.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5G346A28TT;
+				INFOPLIST_FILE = "SBM AYUR/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.org.SBM-AYUR";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		85542CAF22019C790019A6F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 452451D8F790F2193498BADD /* Pods-SBM AYURTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5G346A28TT;
+				INFOPLIST_FILE = "SBM AYURTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.org.SBM-AYURTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SBM AYUR.app/SBM AYUR";
+			};
+			name = Debug;
+		};
+		85542CB022019C790019A6F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AEF09778D5CCFC266D366D9 /* Pods-SBM AYURTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5G346A28TT;
+				INFOPLIST_FILE = "SBM AYURTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.org.SBM-AYURTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SBM AYUR.app/SBM AYUR";
+			};
+			name = Release;
+		};
+		85542CB222019C790019A6F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 818C514BEC6710C4D5148B2E /* Pods-SBM AYURUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5G346A28TT;
+				INFOPLIST_FILE = "SBM AYURUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.org.SBM-AYURUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SBM AYUR";
+			};
+			name = Debug;
+		};
+		85542CB322019C790019A6F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 774034551376159A2672D32B /* Pods-SBM AYURUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5G346A28TT;
+				INFOPLIST_FILE = "SBM AYURUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.org.SBM-AYURUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SBM AYUR";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85542C7A22019C690019A6F2 /* Build configuration list for PBXProject "SBM AYUR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85542CA922019C790019A6F2 /* Debug */,
+				85542CAA22019C790019A6F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85542CAB22019C790019A6F2 /* Build configuration list for PBXNativeTarget "SBM AYUR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85542CAC22019C790019A6F2 /* Debug */,
+				85542CAD22019C790019A6F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85542CAE22019C790019A6F2 /* Build configuration list for PBXNativeTarget "SBM AYURTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85542CAF22019C790019A6F2 /* Debug */,
+				85542CB022019C790019A6F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85542CB122019C790019A6F2 /* Build configuration list for PBXNativeTarget "SBM AYURUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85542CB222019C790019A6F2 /* Debug */,
+				85542CB322019C790019A6F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85542C7722019C690019A6F2 /* Project object */;
+}
