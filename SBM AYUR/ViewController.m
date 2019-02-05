@@ -67,6 +67,23 @@
             NSLog(@"webresponse=%@",res);
             if([[res valueForKey:@"status"] isEqualToString:@"1"]){
                 self.bottomView.hidden = false;
+                [[self navigationController] setNavigationBarHidden:NO animated:NO];
+                UIImage* image3 = [UIImage imageNamed:@"navigation_search.png"];
+                CGRect frameimg = CGRectMake(5,5, 50,50);
+                
+                UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
+                [someButton setBackgroundImage:image3 forState:UIControlStateNormal];
+                [someButton addTarget:self action:@selector(searchButtonClick)
+                     forControlEvents:UIControlEventTouchUpInside];
+                [someButton setShowsTouchWhenHighlighted:YES];
+                UIBarButtonItem *mailbutton =[[UIBarButtonItem alloc] initWithCustomView:someButton];
+                self.navigationItem.rightBarButtonItem =mailbutton;
+              /*  UIBarButtonItem *flipButton = [[UIBarButtonItem alloc]
+                                               initWithTitle:@"SEARCH"
+                                               style:UIBarButtonItemStylePlain
+                                               target:self
+                                               action:@selector(searchButtonClick)];
+                self.navigationItem.rightBarButtonItem = flipButton;*/
             }
           
         });
@@ -74,7 +91,9 @@
     }] resume];
     
 }
-
+-(void)searchButtonClick {
+    
+}
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     NSLog(@"Did finish loading...");
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
