@@ -1,6 +1,7 @@
 
 
 #import "AboutViewController.h"
+#import "ComposeMessageViewController.h"
 @interface AboutViewController ()
 - (IBAction)callButtonClick:(id)sender;
 
@@ -11,7 +12,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.navigationController.navigationBar.hidden = YES;
+
     NSURL *websiteUrl = [NSURL URLWithString:@"https://www.sanvishealth.com"];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:websiteUrl];
     [self.webview loadRequest:urlRequest];
@@ -22,6 +24,10 @@
 }
 -(void)viewDidAppear:(BOOL)animated
 {    //[self.webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.sanvishealth.com"]]];
+}
+- (IBAction)composeButtonClick:(id)sender {
+    ComposeMessageViewController *ViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ComposeMessageView"];
+    [self.navigationController pushViewController:ViewController animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {

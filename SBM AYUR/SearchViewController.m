@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
     self.memoriesTableview.delegate=self;
     self.memoriesTableview.dataSource=self;
     indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -26,14 +27,16 @@
     [indicator bringSubviewToFront:self.view];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
     self.searchBar.delegate = self;
-    [self getMemoriesService];
+    
     
     // Do any additional setup after loading the view.
 }
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     
 }
-
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [self searchmethod:searchBar.text];
+}
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -47,14 +50,14 @@
 {
     
 }
--(void)getMemoriesService
+-(void)getMemoriesService:(NSString *)searchKey
 {
     [indicator startAnimating];
     NSURL *theURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://sbmayur.com/Homepage/getproducts"]];
     NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:theURL      cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:20.0f];
     
     //Specify method of request(Get or Post)
-    [theRequest setHTTPMethod:@"GET"];
+    [theRequest setHTTPMethod:@"POST"];
     
     //Pass some default parameter(like content-type etc.)
     [theRequest setValue:@"application/json" forHTTPHeaderField:@"Accept"];
@@ -102,6 +105,49 @@
     
     
 }
+-(void)searchmethod:(NSString *)searchKey
+{
+    
+    NSMutableDictionary *post = [[NSMutableDictionary alloc]init];
+    [post setValue:searchKey forKey:@"search"];
+    
+    NSError *writeError = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:post options:kNilOptions error:&writeError];
+    
+    NSMutableURLRequest *urlrequest=[[NSMutableURLRequest alloc]init];
+    NSString *urlstring = [NSString stringWithFormat:@"https://sbmayur.com/Homepage/products"];
+    [urlrequest setURL:[NSURL URLWithString:urlstring]];
+    
+    [urlrequest setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [urlrequest setValue:@"application/json; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+    
+    
+    [urlrequest setHTTPMethod:@"POST"];
+    [urlrequest setHTTPBody:jsonData];
+    [[[NSURLSession sharedSession] dataTaskWithRequest:urlrequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
+      {
+          
+          NSError *error1;
+          NSMutableArray *res=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error1];
+          //   NSString *outputString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+          
+          NSLog(@"search webresponse=%@",res);
+          dispatch_async(dispatch_get_main_queue(), ^{
+            
+              NSError *theError = NULL;
+              NSMutableArray *dataResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:&theError];
+              self.contentArray = [[NSMutableArray alloc]init];
+              [self.contentArray addObjectsFromArray:dataResponse];
+              [self.memoriesTableview reloadData];
+              
+          });
+          
+          
+          
+      }] resume];
+    
+}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     

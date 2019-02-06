@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "MemoriesViewController.h"
 #import "AboutViewController.h"
+#import "SearchViewController.h"
 @interface ViewController ()
 
 @end
@@ -31,8 +32,10 @@
     else if (remoteHostStatus == ReachableViaWiFi) {NSLog(@"wifi"); }
     else if (remoteHostStatus == ReachableViaWWAN) {NSLog(@"cell"); }
     [self.webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://sbmayur.com"]]]];
-    [self getDetailsService];
     // Do any additional setup after loading the view, typically from a nib.
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [self getDetailsService];
 }
 
 -(void)getDetailsService
@@ -68,6 +71,8 @@
             if([[res valueForKey:@"status"] isEqualToString:@"1"]){
                 self.bottomView.hidden = false;
                 [[self navigationController] setNavigationBarHidden:NO animated:NO];
+                self.navigationController.navigationBar.hidden = NO;
+
                 UIImage* image3 = [UIImage imageNamed:@"navigation_search.png"];
                 CGRect frameimg = CGRectMake(5,5, 50,50);
                 
@@ -92,7 +97,8 @@
     
 }
 -(void)searchButtonClick {
-    
+    SearchViewController *ViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"searchView"];
+    [self.navigationController pushViewController:ViewController animated:NO];
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     NSLog(@"Did finish loading...");
