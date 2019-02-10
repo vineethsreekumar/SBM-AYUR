@@ -20,7 +20,16 @@
     [super viewDidLoad];
     [SVProgressHUD show];
     _webview.delegate = self;
+    UIImage* image3 = [UIImage imageNamed:@"navigation_search.png"];
+    CGRect frameimg = CGRectMake(5,5, 50,50);
     
+    UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
+    [someButton setBackgroundImage:image3 forState:UIControlStateNormal];
+    [someButton addTarget:self action:@selector(searchButtonClick)
+         forControlEvents:UIControlEventTouchUpInside];
+    [someButton setShowsTouchWhenHighlighted:YES];
+    UIBarButtonItem *mailbutton =[[UIBarButtonItem alloc] initWithCustomView:someButton];
+    self.navigationItem.rightBarButtonItem =mailbutton;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNetworkChange:) name:kReachabilityChangedNotification object:nil];
     
     reachability = [Reachability reachabilityForInternetConnection];
@@ -36,8 +45,61 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [self getDetailsService];
+    [self KAslideShow];
+}
+-(void)KAslideShow
+{
+    
+    
+    
+    
+    //datasource = [@[[UIImage imageNamed:@"logo.png"],[NSURL URLWithString:@"https://i.imgur.com/7jDvjyt.jpg"],@"topbg.png"] mutableCopy];
+    datasource = [@[[UIImage imageNamed:@"001.jpg"],
+                    @"002.jpg",@"003.jpg"] mutableCopy];
+    
+    // KASlideshow
+    _slideshow.datasource = self;
+    _slideshow.delegate = self;
+    [_slideshow setDelay:2]; // Delay between transitions
+    [_slideshow setTransitionDuration:1]; // Transition duration
+    [_slideshow setTransitionType:KASlideShowTransitionSlideHorizontal]; // Choose a transition type (fade or slide)
+    [_slideshow setImagesContentMode:UIViewContentModeScaleAspectFill]; // Choose a content mode for images to display
+    [_slideshow addGesture:KASlideShowGestureTap]; // Gesture t
+    
+    //[_slideshow start];
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    [_slideshow start];
+}
+#pragma mark - KASlideShow datasource
+
+- (NSObject *)slideShow:(KASlideShow *)slideShow objectAtIndex:(NSUInteger)index
+{
+    return datasource[index];
 }
 
+- (NSUInteger)slideShowImagesNumber:(KASlideShow *)slideShow
+{
+    return datasource.count;
+}
+
+#pragma mark - KASlideShow delegate
+
+- (void) slideShowWillShowNext:(KASlideShow *)slideShow
+{
+    // NSLog(@"slideShowWillShowNext, index : %@",@(slideShow.currentIndex));
+}
+
+- (void) slideShowWillShowPrevious:(KASlideShow *)slideShow
+{
+    // NSLog(@"slideShowWillShowPrevious, index : %@",@(slideShow.currentIndex));
+}
+
+- (void) slideShowDidShowNext:(KASlideShow *)slideShow
+{
+    // NSLog(@"slideShowDidShowNext, index : %@",@(slideShow.currentIndex));
+}
 -(void)getDetailsService
 {
     
@@ -73,16 +135,7 @@
                 [[self navigationController] setNavigationBarHidden:NO animated:NO];
                 self.navigationController.navigationBar.hidden = NO;
 
-                UIImage* image3 = [UIImage imageNamed:@"navigation_search.png"];
-                CGRect frameimg = CGRectMake(5,5, 50,50);
-                
-                UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
-                [someButton setBackgroundImage:image3 forState:UIControlStateNormal];
-                [someButton addTarget:self action:@selector(searchButtonClick)
-                     forControlEvents:UIControlEventTouchUpInside];
-                [someButton setShowsTouchWhenHighlighted:YES];
-                UIBarButtonItem *mailbutton =[[UIBarButtonItem alloc] initWithCustomView:someButton];
-                self.navigationItem.rightBarButtonItem =mailbutton;
+              
               /*  UIBarButtonItem *flipButton = [[UIBarButtonItem alloc]
                                                initWithTitle:@"SEARCH"
                                                style:UIBarButtonItemStylePlain

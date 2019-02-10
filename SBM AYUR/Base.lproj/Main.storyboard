@@ -23,6 +23,20 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCD-PX-PYW" customClass="KASlideShow">
+                                <rect key="frame" x="0.0" y="30" width="375" height="184"/>
+                                <color key="backgroundColor" red="0.75" green="0.75" blue="0.75" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="UIp-Cf-4fw"/>
+                                    <constraint firstAttribute="height" constant="184" id="akw-mn-OCm"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="B0z-QO-g0m"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UIp-Cf-4fw"/>
+                                    </mask>
+                                </variation>
+                            </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2m6-Ey-f2g">
                                 <rect key="frame" x="0.0" y="610" width="375" height="57"/>
                                 <subviews>
@@ -38,8 +52,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2B-YF-QQM">
-                                        <rect key="frame" x="280" y="11" width="33" height="33"/>
-                                        <state key="normal" image="ic_chat"/>
+                                        <rect key="frame" x="292" y="11" width="33" height="33"/>
+                                        <state key="normal" image="ic_about"/>
                                         <connections>
                                             <action selector="detailsButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ose-dA-cNW"/>
                                         </connections>
@@ -52,7 +66,7 @@
                                     <constraint firstItem="t2B-YF-QQM" firstAttribute="width" secondItem="cLS-Oi-1mi" secondAttribute="width" id="HVV-NY-hLN"/>
                                     <constraint firstItem="t2B-YF-QQM" firstAttribute="height" secondItem="cLS-Oi-1mi" secondAttribute="height" id="MYX-lN-iwQ"/>
                                     <constraint firstItem="t2B-YF-QQM" firstAttribute="top" secondItem="2m6-Ey-f2g" secondAttribute="top" constant="11" id="SLB-pn-prj"/>
-                                    <constraint firstAttribute="trailing" secondItem="t2B-YF-QQM" secondAttribute="trailing" constant="62" id="TAn-NJ-a3x"/>
+                                    <constraint firstAttribute="trailing" secondItem="t2B-YF-QQM" secondAttribute="trailing" constant="50" id="TAn-NJ-a3x"/>
                                     <constraint firstAttribute="height" constant="57" id="VXi-XM-33y"/>
                                     <constraint firstAttribute="bottom" secondItem="t2B-YF-QQM" secondAttribute="bottom" constant="13" id="W5g-sZ-gcU"/>
                                 </constraints>
@@ -62,7 +76,10 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pdV-1X-Sh4" secondAttribute="trailing" id="1iq-nQ-Q5u"/>
                             <constraint firstItem="pdV-1X-Sh4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DNN-0M-Ahh"/>
+                            <constraint firstItem="aCD-PX-PYW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Sb3-oL-p3R"/>
                             <constraint firstItem="2m6-Ey-f2g" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hoO-mb-gTx"/>
+                            <constraint firstItem="aCD-PX-PYW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="l5P-Rw-9tL"/>
+                            <constraint firstItem="aCD-PX-PYW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lL2-ue-ZXY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pdV-1X-Sh4" secondAttribute="bottom" id="qlP-rQ-QBN"/>
                             <constraint firstItem="pdV-1X-Sh4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rpa-Pm-JvG"/>
                             <constraint firstItem="2m6-Ey-f2g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uiM-o4-eF8"/>
@@ -73,6 +90,7 @@
                     <navigationItem key="navigationItem" id="had-c4-5dq"/>
                     <connections>
                         <outlet property="bottomView" destination="2m6-Ey-f2g" id="zJY-So-X3N"/>
+                        <outlet property="slideshow" destination="aCD-PX-PYW" id="Mq6-4x-0wn"/>
                         <outlet property="webview" destination="pdV-1X-Sh4" id="l83-w9-M7s"/>
                     </connections>
                 </viewController>
@@ -775,7 +793,7 @@
         <image name="call.png" width="400" height="400"/>
         <image name="download.png" width="30" height="30"/>
         <image name="edit-icon.png" width="30" height="30"/>
-        <image name="ic_chat" width="24" height="24"/>
+        <image name="ic_about" width="33" height="33"/>
         <image name="ic_home" width="33" height="33"/>
     </resources>
 </document>

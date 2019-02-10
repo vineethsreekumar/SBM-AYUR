@@ -13,6 +13,10 @@
 		8532CDCB220A146400F723EB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8532CDCA220A146400F723EB /* SearchViewController.m */; };
 		8532CDCE220B64E800F723EB /* ComposeMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8532CDCD220B64E700F723EB /* ComposeMessageViewController.m */; };
 		8532CDD1220B801700F723EB /* edit-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532CDD0220B801500F723EB /* edit-icon@2x.png */; };
+		8532CDD4220EF51E00F723EB /* KASlideShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8532CDD2220EF51C00F723EB /* KASlideShow.m */; };
+		8532CDD8220EF62C00F723EB /* 001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8532CDD5220EF62B00F723EB /* 001.jpg */; };
+		8532CDD9220EF62C00F723EB /* 002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8532CDD6220EF62B00F723EB /* 002.jpg */; };
+		8532CDDA220EF62C00F723EB /* 003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8532CDD7220EF62C00F723EB /* 003.jpg */; };
 		85542C8422019C6A0019A6F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85542C8322019C6A0019A6F2 /* AppDelegate.m */; };
 		85542C8722019C6A0019A6F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85542C8622019C6A0019A6F2 /* ViewController.m */; };
 		85542C8A22019C6A0019A6F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85542C8822019C6A0019A6F2 /* Main.storyboard */; };
@@ -63,6 +67,11 @@
 		8532CDCD220B64E700F723EB /* ComposeMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeMessageViewController.m; sourceTree = "<group>"; };
 		8532CDCF220B6AB600F723EB /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		8532CDD0220B801500F723EB /* edit-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit-icon@2x.png"; sourceTree = "<group>"; };
+		8532CDD2220EF51C00F723EB /* KASlideShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KASlideShow.m; sourceTree = "<group>"; };
+		8532CDD3220EF51D00F723EB /* KASlideShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KASlideShow.h; sourceTree = "<group>"; };
+		8532CDD5220EF62B00F723EB /* 001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 001.jpg; path = Images/001.jpg; sourceTree = "<group>"; };
+		8532CDD6220EF62B00F723EB /* 002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 002.jpg; path = Images/002.jpg; sourceTree = "<group>"; };
+		8532CDD7220EF62C00F723EB /* 003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 003.jpg; path = Images/003.jpg; sourceTree = "<group>"; };
 		85542C7F22019C6A0019A6F2 /* SBM AYUR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SBM AYUR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85542C8222019C6A0019A6F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		85542C8322019C6A0019A6F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -180,11 +189,16 @@
 				8532CDCA220A146400F723EB /* SearchViewController.m */,
 				85542CB622019D2B0019A6F2 /* Reachability.h */,
 				85542CB822019D2B0019A6F2 /* Reachability.m */,
+				8532CDD3220EF51D00F723EB /* KASlideShow.h */,
+				8532CDD2220EF51C00F723EB /* KASlideShow.m */,
 				8532CDCF220B6AB600F723EB /* Config.h */,
 				85542CBB22019D2C0019A6F2 /* splashscreen@2x.png */,
 				8532CDC7220A105E00F723EB /* navigation_search@2x.png */,
 				85542CC822022E760019A6F2 /* call@2x.png */,
 				8532CDD0220B801500F723EB /* edit-icon@2x.png */,
+				8532CDD5220EF62B00F723EB /* 001.jpg */,
+				8532CDD6220EF62B00F723EB /* 002.jpg */,
+				8532CDD7220EF62C00F723EB /* 003.jpg */,
 				85542C8822019C6A0019A6F2 /* Main.storyboard */,
 				85542C8B22019C780019A6F2 /* Assets.xcassets */,
 				85542C8D22019C780019A6F2 /* LaunchScreen.storyboard */,
@@ -332,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8532CDD9220EF62C00F723EB /* 002.jpg in Resources */,
 				85542C8F22019C780019A6F2 /* LaunchScreen.storyboard in Resources */,
 				85542CC522019D2D0019A6F2 /* back-arrow-icon@3x.png in Resources */,
 				85542C8C22019C780019A6F2 /* Assets.xcassets in Resources */,
@@ -339,9 +354,11 @@
 				85542CC922022E760019A6F2 /* call@2x.png in Resources */,
 				8532CDD1220B801700F723EB /* edit-icon@2x.png in Resources */,
 				8532CDC8220A105F00F723EB /* navigation_search@2x.png in Resources */,
+				8532CDDA220EF62C00F723EB /* 003.jpg in Resources */,
 				85542CC722019D2D0019A6F2 /* download@2x.png in Resources */,
 				85542CC622019D2D0019A6F2 /* back-arrow-icon@2x.png in Resources */,
 				85542CC422019D2D0019A6F2 /* splashscreen@2x.png in Resources */,
+				8532CDD8220EF62C00F723EB /* 001.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,10 +440,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SBM AYUR/Pods-SBM AYUR-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +462,7 @@
 			files = (
 				85542C8722019C6A0019A6F2 /* ViewController.m in Sources */,
 				85542C9222019C780019A6F2 /* main.m in Sources */,
+				8532CDD4220EF51E00F723EB /* KASlideShow.m in Sources */,
 				85542CC122019D2D0019A6F2 /* MemoriesDetailViewController.m in Sources */,
 				85542CC322019D2D0019A6F2 /* MemoriesViewController.m in Sources */,
 				85542CC022019D2D0019A6F2 /* AboutViewController.m in Sources */,

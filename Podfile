@@ -5,6 +5,7 @@ target 'SBM AYUR' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
    use_frameworks!
    pod 'SVProgressHUD'
+   pod 'SDWebImage', '~> 3.8'
   # Pods for SBM AYUR
 
   target 'SBM AYURTests' do

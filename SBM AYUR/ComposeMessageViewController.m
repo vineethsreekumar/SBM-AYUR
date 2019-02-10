@@ -27,6 +27,8 @@ NSString *FacilityStaffID;
     self.totextextfield.delegate = self;
     self.subjecttextfield.delegate = self;
     self.message_txtview.delegate = self;
+    self.totextextfield.text = @"enquiry@sbmAyur.com";
+    self.totextextfield.userInteractionEnabled = NO;
     // Do any additional setup after loading the view.
     if(self.passdict.count > 0)
     {
