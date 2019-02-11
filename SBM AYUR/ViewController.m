@@ -10,6 +10,7 @@
 #import "MemoriesViewController.h"
 #import "AboutViewController.h"
 #import "SearchViewController.h"
+#import "ProductViewController.h"
 @interface ViewController ()
 
 @end
@@ -19,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [SVProgressHUD show];
+    _webview.hidden = YES;
     _webview.delegate = self;
     UIImage* image3 = [UIImage imageNamed:@"navigation_search.png"];
     CGRect frameimg = CGRectMake(5,5, 50,50);
@@ -41,6 +43,9 @@
     else if (remoteHostStatus == ReachableViaWiFi) {NSLog(@"wifi"); }
     else if (remoteHostStatus == ReachableViaWWAN) {NSLog(@"cell"); }
     [self.webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://sbmayur.com"]]]];
+    
+    self.bottomStackView.hidden = YES;
+    self.slideshow.hidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -120,6 +125,11 @@
     [urlrequest setHTTPBody:jsonData];
     [[[NSURLSession sharedSession] dataTaskWithRequest:urlrequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if(data == nil) {
+            self.bottomView.hidden = NO;
+            self.bottomStackView.hidden = NO;
+            self.slideshow.hidden = NO;
+            [[self navigationController] setNavigationBarHidden:NO animated:NO];
+            self.navigationController.navigationBar.hidden = NO;
             return ;
         }
         dispatch_async (dispatch_get_main_queue(), ^{
@@ -127,11 +137,13 @@
             NSError *error1;
             NSMutableArray *res=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error1];
             NSString *outputString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            
+            [SVProgressHUD dismiss];
             NSLog(@"message webresponse=%@",outputString);
             NSLog(@"webresponse=%@",res);
             if([[res valueForKey:@"status"] isEqualToString:@"1"]){
-                self.bottomView.hidden = false;
+                self.bottomView.hidden = NO;
+                self.bottomStackView.hidden = NO;
+                self.slideshow.hidden = NO;
                 [[self navigationController] setNavigationBarHidden:NO animated:NO];
                 self.navigationController.navigationBar.hidden = NO;
 
@@ -142,6 +154,10 @@
                                                target:self
                                                action:@selector(searchButtonClick)];
                 self.navigationItem.rightBarButtonItem = flipButton;*/
+            } else {
+                self.bottomStackView.hidden = YES;
+                self.slideshow.hidden = YES;
+                self->_webview.hidden = NO;
             }
           
         });
@@ -186,5 +202,30 @@
 - (IBAction)detailsButtonClick:(id)sender {
     AboutViewController *ViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Aboutview"];
     [self.navigationController pushViewController:ViewController animated:NO];
+}
+- (IBAction)bodyCareButtonClick:(id)sender {
+    UIButton *button = (UIButton*)sender;
+    ProductViewController *ViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ProductView"];
+    ViewController.passProductID = [NSNumber numberWithInt: button.tag];
+    [self.navigationController pushViewController:ViewController animated:NO];
+}
+
+- (IBAction)hairCareButtonClick:(id)sender {
+    UIButton *button = (UIButton*)sender;
+    ProductViewController *ViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ProductView"];
+    ViewController.passProductID = [NSNumber numberWithInt: button.tag];
+    [self.navigationController pushViewController:ViewController animated:NO];
+}
+
+- (IBAction)healthButtonClick:(id)sender {
+}
+
+- (IBAction)lyfeStyleButtonClick:(id)sender {
+}
+
+- (IBAction)menwomenButtonClick:(id)sender {
+}
+
+- (IBAction)skinCareButtonClick:(id)sender {
 }
 @end

@@ -17,6 +17,13 @@
 		8532CDD8220EF62C00F723EB /* 001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8532CDD5220EF62B00F723EB /* 001.jpg */; };
 		8532CDD9220EF62C00F723EB /* 002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8532CDD6220EF62B00F723EB /* 002.jpg */; };
 		8532CDDA220EF62C00F723EB /* 003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8532CDD7220EF62C00F723EB /* 003.jpg */; };
+		8532CDE12211F22200F723EB /* men-women@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532CDDB2211F21900F723EB /* men-women@2x.png */; };
+		8532CDE22211F22200F723EB /* skincare@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532CDDC2211F21A00F723EB /* skincare@2x.png */; };
+		8532CDE32211F22200F723EB /* health@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532CDDD2211F21C00F723EB /* health@2x.png */; };
+		8532CDE42211F22200F723EB /* body-care@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532CDDE2211F21E00F723EB /* body-care@2x.png */; };
+		8532CDE52211F22200F723EB /* hair-care@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532CDDF2211F21F00F723EB /* hair-care@2x.png */; };
+		8532CDE62211F22200F723EB /* lifestyle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532CDE02211F22000F723EB /* lifestyle@2x.png */; };
+		8532CDE92211FC3C00F723EB /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8532CDE82211FC3C00F723EB /* ProductViewController.m */; };
 		85542C8422019C6A0019A6F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85542C8322019C6A0019A6F2 /* AppDelegate.m */; };
 		85542C8722019C6A0019A6F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85542C8622019C6A0019A6F2 /* ViewController.m */; };
 		85542C8A22019C6A0019A6F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85542C8822019C6A0019A6F2 /* Main.storyboard */; };
@@ -72,6 +79,14 @@
 		8532CDD5220EF62B00F723EB /* 001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 001.jpg; path = Images/001.jpg; sourceTree = "<group>"; };
 		8532CDD6220EF62B00F723EB /* 002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 002.jpg; path = Images/002.jpg; sourceTree = "<group>"; };
 		8532CDD7220EF62C00F723EB /* 003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 003.jpg; path = Images/003.jpg; sourceTree = "<group>"; };
+		8532CDDB2211F21900F723EB /* men-women@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "men-women@2x.png"; path = "Images/men-women@2x.png"; sourceTree = "<group>"; };
+		8532CDDC2211F21A00F723EB /* skincare@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "skincare@2x.png"; path = "Images/skincare@2x.png"; sourceTree = "<group>"; };
+		8532CDDD2211F21C00F723EB /* health@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "health@2x.png"; path = "Images/health@2x.png"; sourceTree = "<group>"; };
+		8532CDDE2211F21E00F723EB /* body-care@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "body-care@2x.png"; path = "Images/body-care@2x.png"; sourceTree = "<group>"; };
+		8532CDDF2211F21F00F723EB /* hair-care@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hair-care@2x.png"; path = "Images/hair-care@2x.png"; sourceTree = "<group>"; };
+		8532CDE02211F22000F723EB /* lifestyle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lifestyle@2x.png"; path = "Images/lifestyle@2x.png"; sourceTree = "<group>"; };
+		8532CDE72211FC3C00F723EB /* ProductViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
+		8532CDE82211FC3C00F723EB /* ProductViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
 		85542C7F22019C6A0019A6F2 /* SBM AYUR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SBM AYUR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85542C8222019C6A0019A6F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		85542C8322019C6A0019A6F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -181,6 +196,8 @@
 				85542CBE22019D2C0019A6F2 /* download@2x.png */,
 				85542CBF22019D2D0019A6F2 /* MemoriesDetailViewController.h */,
 				85542CB722019D2B0019A6F2 /* MemoriesDetailViewController.m */,
+				8532CDE72211FC3C00F723EB /* ProductViewController.h */,
+				8532CDE82211FC3C00F723EB /* ProductViewController.m */,
 				8532CDCC220B64E700F723EB /* ComposeMessageViewController.h */,
 				8532CDCD220B64E700F723EB /* ComposeMessageViewController.m */,
 				85542CB922019D2C0019A6F2 /* MemoriesViewController.h */,
@@ -199,6 +216,12 @@
 				8532CDD5220EF62B00F723EB /* 001.jpg */,
 				8532CDD6220EF62B00F723EB /* 002.jpg */,
 				8532CDD7220EF62C00F723EB /* 003.jpg */,
+				8532CDDE2211F21E00F723EB /* body-care@2x.png */,
+				8532CDDF2211F21F00F723EB /* hair-care@2x.png */,
+				8532CDDD2211F21C00F723EB /* health@2x.png */,
+				8532CDE02211F22000F723EB /* lifestyle@2x.png */,
+				8532CDDB2211F21900F723EB /* men-women@2x.png */,
+				8532CDDC2211F21A00F723EB /* skincare@2x.png */,
 				85542C8822019C6A0019A6F2 /* Main.storyboard */,
 				85542C8B22019C780019A6F2 /* Assets.xcassets */,
 				85542C8D22019C780019A6F2 /* LaunchScreen.storyboard */,
@@ -346,6 +369,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8532CDE32211F22200F723EB /* health@2x.png in Resources */,
+				8532CDE52211F22200F723EB /* hair-care@2x.png in Resources */,
 				8532CDD9220EF62C00F723EB /* 002.jpg in Resources */,
 				85542C8F22019C780019A6F2 /* LaunchScreen.storyboard in Resources */,
 				85542CC522019D2D0019A6F2 /* back-arrow-icon@3x.png in Resources */,
@@ -355,10 +380,14 @@
 				8532CDD1220B801700F723EB /* edit-icon@2x.png in Resources */,
 				8532CDC8220A105F00F723EB /* navigation_search@2x.png in Resources */,
 				8532CDDA220EF62C00F723EB /* 003.jpg in Resources */,
+				8532CDE62211F22200F723EB /* lifestyle@2x.png in Resources */,
 				85542CC722019D2D0019A6F2 /* download@2x.png in Resources */,
+				8532CDE42211F22200F723EB /* body-care@2x.png in Resources */,
 				85542CC622019D2D0019A6F2 /* back-arrow-icon@2x.png in Resources */,
 				85542CC422019D2D0019A6F2 /* splashscreen@2x.png in Resources */,
+				8532CDE12211F22200F723EB /* men-women@2x.png in Resources */,
 				8532CDD8220EF62C00F723EB /* 001.jpg in Resources */,
+				8532CDE22211F22200F723EB /* skincare@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +491,7 @@
 			files = (
 				85542C8722019C6A0019A6F2 /* ViewController.m in Sources */,
 				85542C9222019C780019A6F2 /* main.m in Sources */,
+				8532CDE92211FC3C00F723EB /* ProductViewController.m in Sources */,
 				8532CDD4220EF51E00F723EB /* KASlideShow.m in Sources */,
 				85542CC122019D2D0019A6F2 /* MemoriesDetailViewController.m in Sources */,
 				85542CC322019D2D0019A6F2 /* MemoriesViewController.m in Sources */,
