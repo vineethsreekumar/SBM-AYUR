@@ -70,7 +70,7 @@
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:post options:kNilOptions error:&writeError];
     
     NSMutableURLRequest *urlrequest=[[NSMutableURLRequest alloc]init];
-    NSString *urlstring = [NSString stringWithFormat:@"https://sbmayur.com/Homepage/getcategoryproductskey"];
+    NSString *urlstring = [NSString stringWithFormat:@"https://sbmayur.com/Homepage/getcategoryproducts"];
     [urlrequest setURL:[NSURL URLWithString:urlstring]];
     
     [urlrequest setValue:@"application/json" forHTTPHeaderField:@"Accept"];

@@ -6,6 +6,8 @@ target 'SBM AYUR' do
    use_frameworks!
    pod 'SVProgressHUD'
    pod 'SDWebImage', '~> 3.8'
+   pod 'DYQRCodeDecoder'
+   pod 'QRCodeReaderViewController', '~> 4.0.2'
   # Pods for SBM AYUR
 
   target 'SBM AYURTests' do

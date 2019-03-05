@@ -41,6 +41,7 @@
 		85542CC622019D2D0019A6F2 /* back-arrow-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85542CBD22019D2C0019A6F2 /* back-arrow-icon@2x.png */; };
 		85542CC722019D2D0019A6F2 /* download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85542CBE22019D2C0019A6F2 /* download@2x.png */; };
 		85542CC922022E760019A6F2 /* call@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85542CC822022E760019A6F2 /* call@2x.png */; };
+		85BB14E2222A52BA00DCE964 /* qrimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85BB14E1222A52BA00DCE964 /* qrimage@2x.png */; };
 		DA474D5EB4DBF168C6153624 /* Pods_SBM_AYURTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92914C703E51391604ACF6A /* Pods_SBM_AYURTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		85542CBE22019D2C0019A6F2 /* download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download@2x.png"; sourceTree = "<group>"; };
 		85542CBF22019D2D0019A6F2 /* MemoriesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoriesDetailViewController.h; sourceTree = "<group>"; };
 		85542CC822022E760019A6F2 /* call@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call@2x.png"; sourceTree = "<group>"; };
+		85BB14E1222A52BA00DCE964 /* qrimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "qrimage@2x.png"; path = "Images/qrimage@2x.png"; sourceTree = "<group>"; };
 		90F125621CCE83F7FE94279D /* Pods_SBM_AYUR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SBM_AYUR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99675ACBD3E245AC9DF34DAB /* Pods-SBM AYUR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBM AYUR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SBM AYUR/Pods-SBM AYUR.debug.xcconfig"; sourceTree = "<group>"; };
 		AD9B1EBA4FA9D7233F1E6F97 /* Pods_SBM_AYURUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SBM_AYURUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +224,7 @@
 				8532CDE02211F22000F723EB /* lifestyle@2x.png */,
 				8532CDDB2211F21900F723EB /* men-women@2x.png */,
 				8532CDDC2211F21A00F723EB /* skincare@2x.png */,
+				85BB14E1222A52BA00DCE964 /* qrimage@2x.png */,
 				85542C8822019C6A0019A6F2 /* Main.storyboard */,
 				85542C8B22019C780019A6F2 /* Assets.xcassets */,
 				85542C8D22019C780019A6F2 /* LaunchScreen.storyboard */,
@@ -378,6 +381,7 @@
 				85542C8A22019C6A0019A6F2 /* Main.storyboard in Resources */,
 				85542CC922022E760019A6F2 /* call@2x.png in Resources */,
 				8532CDD1220B801700F723EB /* edit-icon@2x.png in Resources */,
+				85BB14E2222A52BA00DCE964 /* qrimage@2x.png in Resources */,
 				8532CDC8220A105F00F723EB /* navigation_search@2x.png in Resources */,
 				8532CDDA220EF62C00F723EB /* 003.jpg in Resources */,
 				8532CDE62211F22200F723EB /* lifestyle@2x.png in Resources */,
@@ -469,11 +473,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SBM AYUR/Pods-SBM AYUR-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DYQRCodeDecoder/DYQRCodeDecoder.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCodeReaderViewController/QRCodeReaderViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DYQRCodeDecoder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReaderViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
@@ -672,6 +680,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5G346A28TT;
 				INFOPLIST_FILE = "SBM AYUR/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -690,6 +699,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5G346A28TT;
 				INFOPLIST_FILE = "SBM AYUR/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

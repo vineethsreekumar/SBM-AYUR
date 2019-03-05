@@ -11,7 +11,11 @@
 #import "AboutViewController.h"
 #import "SearchViewController.h"
 #import "ProductViewController.h"
-@interface ViewController ()
+#import "DYQRCodeDecoderViewController.h"
+#import "QRCodeReader.h"
+#import "QRCodeReaderViewController.h"
+
+@interface ViewController ()<QRCodeReaderDelegate>
 
 @end
 
@@ -32,6 +36,7 @@
     [someButton setShowsTouchWhenHighlighted:YES];
     UIBarButtonItem *mailbutton =[[UIBarButtonItem alloc] initWithCustomView:someButton];
     self.navigationItem.rightBarButtonItem =mailbutton;
+    [self cameraButtonView];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNetworkChange:) name:kReachabilityChangedNotification object:nil];
     
     reachability = [Reachability reachabilityForInternetConnection];
@@ -48,6 +53,80 @@
     self.slideshow.hidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
 }
+-(void)cameraButtonView{
+    UIImage* image3 = [UIImage imageNamed:@"qrimage.png"];
+    CGRect frameimg = CGRectMake(5,5, 50,50);
+    
+    UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
+    [someButton setImage:image3 forState:UIControlStateNormal];
+    [someButton addTarget:self action:@selector(qrButtonClick)
+         forControlEvents:UIControlEventTouchUpInside];
+    [someButton setShowsTouchWhenHighlighted:YES];
+    UIBarButtonItem *mailbutton =[[UIBarButtonItem alloc] initWithCustomView:someButton];
+    self.navigationItem.leftBarButtonItem =mailbutton;
+}
+-(void)qrButtonClick{
+    QRCodeReader *reader = [QRCodeReader readerWithMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
+    
+    // Instantiate the view controller
+    QRCodeReaderViewController *vc = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Cancel" codeReader:reader startScanningAtLoad:YES showSwitchCameraButton:YES showTorchButton:YES];
+    
+    // Set the presentation style
+    vc.modalPresentationStyle = UIModalPresentationFormSheet;
+    
+    // Define the delegate receiver
+    vc.delegate = self;
+    
+    // Or use blocks
+    [reader setCompletionWithBlock:^(NSString *resultAsString) {
+        NSLog(@"%@", resultAsString);
+        [self dismissViewControllerAnimated:YES completion:^{
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Message"
+                                                                           message:@"Product not found in our database"
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                  handler:^(UIAlertAction * action) {
+                                                                      [self dismissViewControllerAnimated:YES completion:NULL];
+                                                                  }];
+            
+            [alert addAction:defaultAction];
+             [ self presentViewController:alert animated:YES completion:nil];
+            
+        }];
+
+     /*   UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Message"
+                                                                       message:@"TProduct not found in our database"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {
+                                                                  [self dismissViewControllerAnimated:YES completion:NULL];
+                                                              }];
+        
+        [alert addAction:defaultAction];
+        UIViewController *top = [UIApplication sharedApplication].keyWindow.rootViewController;
+
+        [ top presentViewController:alert animated:YES completion:nil];*/
+    }];
+    [self presentViewController:vc animated:YES completion:NULL];
+}
+
+#pragma mark - QRCodeReader Delegate Methods
+
+- (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result
+{
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"%@", result);
+        
+    }];
+}
+
+- (void)readerDidCancel:(QRCodeReaderViewController *)reader
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 -(void)viewWillAppear:(BOOL)animated{
     [self getDetailsService];
     [self KAslideShow];
@@ -118,7 +197,7 @@
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:post options:kNilOptions error:&writeError];
     
     NSMutableURLRequest *urlrequest=[[NSMutableURLRequest alloc]init];
-    NSString *urlstring = [NSString stringWithFormat:@"https://sbmayur.com/Homepage/getdetails"];
+    NSString *urlstring = [NSString stringWithFormat:@"https://sbmayur.com/Homepage/getstatus"];
     [urlrequest setURL:[NSURL URLWithString:urlstring]];
     [urlrequest addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [urlrequest setHTTPMethod:@"POST"];
@@ -218,14 +297,58 @@
 }
 
 - (IBAction)healthButtonClick:(id)sender {
+    UIButton *button = (UIButton*)sender;
+    ProductViewController *ViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ProductView"];
+    ViewController.passProductID = [NSNumber numberWithInt: button.tag];
+    [self.navigationController pushViewController:ViewController animated:NO];
 }
 
 - (IBAction)lyfeStyleButtonClick:(id)sender {
+    UIButton *button = (UIButton*)sender;
+    ProductViewController *ViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ProductView"];
+    ViewController.passProductID = [NSNumber numberWithInt: button.tag];
+    [self.navigationController pushViewController:ViewController animated:NO];
 }
 
 - (IBAction)menwomenButtonClick:(id)sender {
+    UIButton *button = (UIButton*)sender;
+    ProductViewController *ViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ProductView"];
+    ViewController.passProductID = [NSNumber numberWithInt: button.tag];
+    [self.navigationController pushViewController:ViewController animated:NO];
 }
 
 - (IBAction)skinCareButtonClick:(id)sender {
+    UIButton *button = (UIButton*)sender;
+    ProductViewController *ViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ProductView"];
+    ViewController.passProductID = [NSNumber numberWithInt: button.tag];
+    [self.navigationController pushViewController:ViewController animated:NO];
 }
+- (IBAction)shareButtonClick:(id)sender {
+    NSString *textToShare = @"Look at this awesome website for SBM Products";
+    NSURL *myWebsite = [NSURL URLWithString:@"http://www.sbmayur.com/"];
+    
+    NSArray *objectsToShare = @[textToShare, myWebsite];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+    /*
+    NSArray *excludeActivities = @[UIActivityTypeAirDrop,
+                                   UIActivityTypePrint,
+                                   UIActivityTypeAssignToContact,
+                                   UIActivityTypeSaveToCameraRoll,
+                                   UIActivityTypeAddToReadingList,
+                                   UIActivityTypePostToFlickr,
+                                   UIActivityTypePostToVimeo];
+    
+    activityVC.excludedActivityTypes = excludeActivities;*/
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        
+        activityVC.popoverPresentationController.sourceView = self.view;
+        activityVC.popoverPresentationController.sourceRect = CGRectMake(self.view.bounds.size.width/2, self.view.bounds.size.height/4, 0, 0);
+        
+    }
+    
+    [self presentViewController:activityVC animated:YES completion:nil];
+
+}
+
 @end

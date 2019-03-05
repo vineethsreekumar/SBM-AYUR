@@ -52,23 +52,32 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2B-YF-QQM">
-                                        <rect key="frame" x="292" y="11" width="33" height="33"/>
+                                        <rect key="frame" x="171" y="11" width="33" height="33"/>
                                         <state key="normal" image="ic_about"/>
                                         <connections>
                                             <action selector="detailsButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ose-dA-cNW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vki-4p-Jat">
+                                        <rect key="frame" x="293" y="12" width="33" height="33"/>
+                                        <state key="normal" image="ic_share"/>
+                                        <connections>
+                                            <action selector="shareButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jkq-A6-Lua"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25098039220000001" green="0.58823529409999997" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="cLS-Oi-1mi" secondAttribute="bottom" constant="12" id="2UB-nE-Z6F"/>
+                                    <constraint firstItem="t2B-YF-QQM" firstAttribute="centerX" secondItem="2m6-Ey-f2g" secondAttribute="centerX" id="Chs-Og-WUS"/>
                                     <constraint firstItem="cLS-Oi-1mi" firstAttribute="leading" secondItem="2m6-Ey-f2g" secondAttribute="leading" constant="49" id="GFZ-Mt-Da1"/>
                                     <constraint firstItem="t2B-YF-QQM" firstAttribute="width" secondItem="cLS-Oi-1mi" secondAttribute="width" id="HVV-NY-hLN"/>
                                     <constraint firstItem="t2B-YF-QQM" firstAttribute="height" secondItem="cLS-Oi-1mi" secondAttribute="height" id="MYX-lN-iwQ"/>
                                     <constraint firstItem="t2B-YF-QQM" firstAttribute="top" secondItem="2m6-Ey-f2g" secondAttribute="top" constant="11" id="SLB-pn-prj"/>
-                                    <constraint firstAttribute="trailing" secondItem="t2B-YF-QQM" secondAttribute="trailing" constant="50" id="TAn-NJ-a3x"/>
                                     <constraint firstAttribute="height" constant="57" id="VXi-XM-33y"/>
                                     <constraint firstAttribute="bottom" secondItem="t2B-YF-QQM" secondAttribute="bottom" constant="13" id="W5g-sZ-gcU"/>
+                                    <constraint firstAttribute="trailing" secondItem="vki-4p-Jat" secondAttribute="trailing" constant="49" id="eas-6D-jlB"/>
+                                    <constraint firstAttribute="bottom" secondItem="vki-4p-Jat" secondAttribute="bottom" constant="12" id="ghw-2d-eST"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nAz-A6-U7I">
@@ -1008,6 +1017,7 @@
         <image name="health.png" width="120" height="120"/>
         <image name="ic_about" width="33" height="33"/>
         <image name="ic_home" width="33" height="33"/>
+        <image name="ic_share" width="33" height="33"/>
         <image name="lifestyle.png" width="120" height="120"/>
         <image name="men-women.png" width="120" height="120"/>
         <image name="skincare.png" width="120" height="120"/>

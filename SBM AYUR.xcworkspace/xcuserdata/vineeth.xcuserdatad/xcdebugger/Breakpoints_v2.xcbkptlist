@@ -9,14 +9,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SBM AYUR/ProductViewController.m"
-            timestampString = "571606371.313692"
+            filePath = "SBM AYUR/ViewController.m"
+            timestampString = "573328684.778381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "-searchmethod"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "-reader:didScanResult:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__39-[ViewController reader:didScanResult:]_block_invoke"
+                  moduleName = "SBM AYUR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/BACKUP/APPS/SBM%20AYUR/SBM%20AYUR/ViewController.m"
+                  timestampString = "573328685.029641"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.123"
+                  moduleName = "SBM AYUR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/BACKUP/APPS/SBM%20AYUR/SBM%20AYUR/ViewController.m"
+                  timestampString = "573328685.033826"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

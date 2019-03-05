@@ -1,22 +1,30 @@
 PODS:
+  - DYQRCodeDecoder (1.1.2)
+  - QRCodeReaderViewController (4.0.2)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - DYQRCodeDecoder
+  - QRCodeReaderViewController (~> 4.0.2)
   - SDWebImage (~> 3.8)
   - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - DYQRCodeDecoder
+    - QRCodeReaderViewController
     - SDWebImage
     - SVProgressHUD
 
 SPEC CHECKSUMS:
+  DYQRCodeDecoder: 8468610fa383361fba4e9c84711a56e6d8ed3169
+  QRCodeReaderViewController: e8f27d035b3e72b1d4b1c61ff66458287e3be0ff
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 3c28b38fbeee5f67d19af534fde522c427ecbe76
+PODFILE CHECKSUM: 79186ba11695113cf0339f5874c317feb70d8202
 
 COCOAPODS: 1.5.3
